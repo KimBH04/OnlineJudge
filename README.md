@@ -1,2 +1,2 @@
-My Baekjoon online judge answer<br>
-Invalide code may exist
+본인이 작성한 백준 온라인 저지 문제 해답 코드들 입니다
+틀린 코드가 몇몇 포함되어있을 수 있습니다
