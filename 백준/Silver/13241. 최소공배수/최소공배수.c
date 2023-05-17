@@ -15,7 +15,7 @@ ll GCD(ll a, ll b)
 
 int main()
 {
-    ll a, b;
+    ll a, b, gcd;
     scanf("%lld %lld", &a, &b);
     if (a < b)
     {
