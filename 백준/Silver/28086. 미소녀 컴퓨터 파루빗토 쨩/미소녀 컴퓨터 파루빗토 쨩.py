@@ -1,6 +1,3 @@
-from math import *
-
-
 def calculater(a: int, b: int, o: str):
     if o == "+":
         return a + b
@@ -9,7 +6,7 @@ def calculater(a: int, b: int, o: str):
     if o == "*":
         return a * b
     if o == "/":
-        return floor(a / b)
+        return a // b
 
 
 n = ["", ""]
