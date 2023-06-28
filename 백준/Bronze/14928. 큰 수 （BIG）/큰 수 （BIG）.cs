@@ -1,0 +1,1 @@
+using System.Numerics;Console.WriteLine(BigInteger.Parse(Console.ReadLine()!)%20000303);
