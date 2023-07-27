@@ -58,7 +58,6 @@ public readonly struct Circle
 
         double resultDis = Sqrt(4 - halfDis);
 
-        //C#은 삼각함수에 각도가 아닌 라디안을 넣어야 했던 건에 대하여...
         double resultx = Sin(radian) * resultDis;
         double resulty = Cos(radian) * resultDis;
 
