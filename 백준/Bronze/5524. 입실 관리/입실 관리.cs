@@ -1,0 +1,1 @@
+int t=int.Parse(Console.ReadLine());while(t-->0)Console.WriteLine(Console.ReadLine().ToLower());
