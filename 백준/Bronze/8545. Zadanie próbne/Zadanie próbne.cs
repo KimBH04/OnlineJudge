@@ -1,0 +1,1 @@
+Console.Write(string.Join("",Console.ReadLine().Reverse()));
