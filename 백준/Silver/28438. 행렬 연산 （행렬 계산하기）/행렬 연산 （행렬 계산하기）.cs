@@ -6,8 +6,8 @@ int n = int.Parse(input[0]),
     m = int.Parse(input[1]),
     q = int.Parse(input[2]);
 
-long[] ro = Enumerable.Repeat(0L, n).ToArray(),
-       cu = Enumerable.Repeat(0L, m).ToArray();
+int[] ro = Enumerable.Repeat(0, n).ToArray(),
+      cu = Enumerable.Repeat(0, m).ToArray();
 
 while (q-- > 0)
 {
