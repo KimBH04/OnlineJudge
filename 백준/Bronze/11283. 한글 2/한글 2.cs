@@ -1,0 +1,1 @@
+Console.Write(Console.Read()-44031);
