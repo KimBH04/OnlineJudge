@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a[10], r = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        cin >> a[i];
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        int b;
+        cin >> b;
+        if (a[i] > b)
+        {
+            r++;
+        }
+        else if (a[i] < b)
+        {
+            r--;
+        }
+    }
+
+    cout << (r > 0 ? "A" : r < 0 ? "B" : "D");
+    return 0;
+}
