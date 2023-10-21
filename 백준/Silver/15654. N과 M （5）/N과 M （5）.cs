@@ -1,3 +1,5 @@
+using StreamWriter sw = new(Console.OpenStandardOutput());
+
 string[] inputs = Console.ReadLine()!.Split();
 int n = int.Parse(inputs[0]), m = int.Parse(inputs[1]);
 
@@ -11,13 +13,13 @@ for (int i = 0; i < n; i++)
 bool[] b = new bool[n];
 Array.Sort(a);
 Array.Clear(b);
-BackTracking(a, new int[m], b, n, 0, m);
+BackTracking(sw, a, new int[m], b, n, 0, m);
 
-static void BackTracking(int[] arr, int[] output, bool[] isSelected, int len, int m, int depth)
+static void BackTracking(StreamWriter sw, int[] arr, int[] output, bool[] isSelected, int len, int m, int depth)
 {
     if (m == depth)
     {
-        Console.WriteLine(string.Join(' ', output));
+        sw.WriteLine(string.Join(' ', output));
     }
     else
     {
@@ -30,7 +32,7 @@ static void BackTracking(int[] arr, int[] output, bool[] isSelected, int len, in
 
             output[m] = arr[i];
             isSelected[i] = true;
-            BackTracking(arr, output, isSelected, len, m + 1, depth);
+            BackTracking(sw, arr, output, isSelected, len, m + 1, depth);
             isSelected[i] = false;
         }
     }
