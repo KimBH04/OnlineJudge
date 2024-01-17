@@ -32,9 +32,7 @@ while (true)
         if (eratos[i] && eratos[n - i])
         {
             sw.WriteLine($"{n} = {i} + {n - i}");
-            goto Goldbach;
+            break;
         }
     }
-    sw.WriteLine("Goldbach's conjecture is wrong.");
-Goldbach:;
 }
