@@ -1,8 +1,28 @@
 #include <stdio.h>
 
+int gomoku[30][30] = { { 0, }, };
+int dir[4][2][6] =
+{
+    {
+        { 1, 2, 3, 4, -1, 5 },
+        { 0, 0, 0, 0, 0, 0 }
+    },
+    {
+        { 0, 0, 0, 0, 0, 0 },
+        { 1, 2, 3, 4, -1, 5 }
+    },
+    {
+        { 1, 2, 3, 4, -1, 5 },
+        { 1, 2, 3, 4, -1, 5 }
+    },
+    {
+        { -1, -2, -3, -4, 1, -5 },
+        { 1, 2, 3, 4, -1, 5 }
+    }
+};
+
 int main()
 {
-    int gomoku[30][30] = { { 0, }, };
     for (int i = 5; i < 24; i++)
     {
         for (int j = 5; j < 24; j++)
@@ -15,87 +35,27 @@ int main()
     {
         for (int i = 5; i < 24; i++)
         {
-            if (gomoku[i][j] == gomoku[i + 1][j] &&
-                gomoku[i][j] == gomoku[i + 2][j] &&
-                gomoku[i][j] == gomoku[i + 3][j] &&
-                gomoku[i][j] == gomoku[i + 4][j] &&
-                gomoku[i][j] != gomoku[i - 1][j] &&
-                gomoku[i][j] != gomoku[i + 5][j])
+            for (int k = 0; k < 4; k++)
             {
-                if (gomoku[i][j] == 1)
+                if (gomoku[i][j] == gomoku[i + dir[k][0][0]][j + dir[k][1][0]] &&
+                    gomoku[i][j] == gomoku[i + dir[k][0][1]][j + dir[k][1][1]] &&
+                    gomoku[i][j] == gomoku[i + dir[k][0][2]][j + dir[k][1][2]] &&
+                    gomoku[i][j] == gomoku[i + dir[k][0][3]][j + dir[k][1][3]] &&
+                    gomoku[i][j] != gomoku[i + dir[k][0][4]][j + dir[k][1][4]] &&
+                    gomoku[i][j] != gomoku[i + dir[k][0][5]][j + dir[k][1][5]])
                 {
-                    printf("1\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
-                }
-                else if (gomoku[i][j] == 2)
-                {
-                    printf("2\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
-                }
-            }
-            
-            if (gomoku[i][j] == gomoku[i][j + 1] &&
-                gomoku[i][j] == gomoku[i][j + 2] &&
-                gomoku[i][j] == gomoku[i][j + 3] &&
-                gomoku[i][j] == gomoku[i][j + 4] &&
-                gomoku[i][j] != gomoku[i][j - 1] &&
-                gomoku[i][j] != gomoku[i][j + 5])
-            {
-                if (gomoku[i][j] == 1)
-                {
-                    printf("1\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
-                }
-                else if (gomoku[i][j] == 2)
-                {
-                    printf("2\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
-                }
-            }
-
-            if (gomoku[i][j] == gomoku[i + 1][j + 1] &&
-                gomoku[i][j] == gomoku[i + 2][j + 2] &&
-                gomoku[i][j] == gomoku[i + 3][j + 3] &&
-                gomoku[i][j] == gomoku[i + 4][j + 4] &&
-                gomoku[i][j] != gomoku[i - 1][j - 1] &&
-                gomoku[i][j] != gomoku[i + 5][j + 5])
-            {
-                if (gomoku[i][j] == 1)
-                {
-                    printf("1\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
-                }
-                else if (gomoku[i][j] == 2)
-                {
-                    printf("2\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
-                }
-            }
-            
-            if (gomoku[i][j] == gomoku[i - 1][j + 1] &&
-                gomoku[i][j] == gomoku[i - 2][j + 2] &&
-                gomoku[i][j] == gomoku[i - 3][j + 3] &&
-                gomoku[i][j] == gomoku[i - 4][j + 4] &&
-                gomoku[i][j] != gomoku[i + 1][j - 1] &&
-                gomoku[i][j] != gomoku[i - 5][j + 5])
-            {
-                if (gomoku[i][j] == 1)
-                {
-                    printf("1\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
-                }
-                else if (gomoku[i][j] == 2)
-                {
-                    printf("2\n");
-                    printf("%d %d", i - 4, j - 4);
-                    return 0;
+                    if (gomoku[i][j] == 1)
+                    {
+                        printf("1\n");
+                        printf("%d %d", i - 4, j - 4);
+                        return 0;
+                    }
+                    else if (gomoku[i][j] == 2)
+                    {
+                        printf("2\n");
+                        printf("%d %d", i - 4, j - 4);
+                        return 0;
+                    }
                 }
             }
         }
