@@ -37,25 +37,17 @@ int main()
         {
             for (int k = 0; k < 4; k++)
             {
-                if (gomoku[i][j] == gomoku[i + dir[k][0][0]][j + dir[k][1][0]] &&
+                if (gomoku[i][j] &&
+                    gomoku[i][j] == gomoku[i + dir[k][0][0]][j + dir[k][1][0]] &&
                     gomoku[i][j] == gomoku[i + dir[k][0][1]][j + dir[k][1][1]] &&
                     gomoku[i][j] == gomoku[i + dir[k][0][2]][j + dir[k][1][2]] &&
                     gomoku[i][j] == gomoku[i + dir[k][0][3]][j + dir[k][1][3]] &&
                     gomoku[i][j] != gomoku[i + dir[k][0][4]][j + dir[k][1][4]] &&
                     gomoku[i][j] != gomoku[i + dir[k][0][5]][j + dir[k][1][5]])
                 {
-                    if (gomoku[i][j] == 1)
-                    {
-                        printf("1\n");
-                        printf("%d %d", i - 4, j - 4);
-                        return 0;
-                    }
-                    else if (gomoku[i][j] == 2)
-                    {
-                        printf("2\n");
-                        printf("%d %d", i - 4, j - 4);
-                        return 0;
-                    }
+                    printf("%d\n", gomoku[i][j]);
+                    printf("%d %d", i - 4, j - 4);
+                    return 0;
                 }
             }
         }
