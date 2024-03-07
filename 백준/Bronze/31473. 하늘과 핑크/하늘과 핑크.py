@@ -1,2 +1,3 @@
-def i():return sum(map(int,input().split()))
-input();a,b=i(),i();print(b,a)
+j=input
+def i():return sum(map(int,j().split()))
+j();a,b=i(),i();print(b,a)
