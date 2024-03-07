@@ -1,3 +1,2 @@
-input()
-a,b=sum(map(int,input().split())),sum(map(int,input().split()))
-print(b,a)
+def i():return sum(map(int,input().split()))
+input();a,b=i(),i();print(b,a)
