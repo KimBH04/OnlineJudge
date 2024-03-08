@@ -1,5 +1,3 @@
-using System.Numerics;
-
 int n = int.Parse(Console.ReadLine()!);
 string[] s = Console.ReadLine()!.Split();
 
@@ -14,4 +12,11 @@ for (int i = n - 1; i > 0; i--)
     }
 }
 
-Console.WriteLine(BigInteger.Parse(string.Join(string.Empty, s)));
+if (s[0] == "0")
+{
+    Console.WriteLine(0);
+}
+else
+{
+    Console.WriteLine(string.Join(string.Empty, s));
+}
