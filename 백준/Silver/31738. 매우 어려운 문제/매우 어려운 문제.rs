@@ -7,13 +7,13 @@ fn main() {
     
     let n = input.next().unwrap();
     let m = input.next().unwrap();
-    if n >= m {
-        println!("0");
-    } else {
-        let mut a = 1;
-        for i in 2..=n {
-            a = a % m * i % m;
+    
+    let mut a = 1;
+    for i in 2..=n {
+        a = a % m * i % m;
+        if a == 0 {
+            break;
         }
-        println!("{a}");
     }
+    println!("{a}");
 }
