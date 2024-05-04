@@ -6,10 +6,9 @@ int main() {
     max = *dp;
     for (int i = 1; i < n; i++) {
         scanf("%d", dp + i);
-        if (dp[i] < dp[i - 1] + dp[i]) {
+        if (0 < dp[i - 1]) {
             dp[i] += dp[i - 1];
         }
-
         if (max < dp[i]) {
             max = dp[i];
         }
