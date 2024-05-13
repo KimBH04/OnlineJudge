@@ -1,7 +1,5 @@
 #include <iostream>
-#include <string.h>
 #include <queue>
-#include <assert.h>
 
 int n, m, k;
 bool map[1001][1001], visited[11][1001][1001];
@@ -53,7 +51,6 @@ inline void set() {
     std::cin >> n >> m >> k;
     for (int r = 1; r <= n; r++) {
         std::cin >> input;
-        assert(strlen(input) == m);
         for (int c = 1; c <= m; c++) {
             map[r][c] = input[c - 1] == '1';
             for (int remain = 0; remain <= k; remain++) {
