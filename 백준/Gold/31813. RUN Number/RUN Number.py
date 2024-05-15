@@ -7,8 +7,9 @@ while t:
     re = []
     while n:
         if k < int('1' * n):
-            k -= 999
-            re.append('999')
+            run_str = '9' * (n - 1)
+            k -= int(run_str)
+            re.append(run_str)
         else:
             for c in '987654321':
                 run_str = c * n
