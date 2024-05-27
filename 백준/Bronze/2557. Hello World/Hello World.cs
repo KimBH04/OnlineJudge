@@ -1,12 +1,8 @@
-using System;
-
-namespace Prob2557
+try
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
+    throw new Exception("Hello World!");
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
 }
