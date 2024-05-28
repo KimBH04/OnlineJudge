@@ -4,7 +4,7 @@ while t > 0:
     dp = [[0] * 256 for _ in range(32)]
     for i in range(k + 1):
         for j in range(n + 1):
-            dp[i][j] = 1 if i >= j else 0
+            dp[i][j] = int(i >= j)
     for i in range(1, k + 1):
         temp = [0] * 256
         j = 0
