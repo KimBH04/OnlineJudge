@@ -4,6 +4,10 @@
 #include <algorithm>
 
 int main() {
+    std::cin.tie(0);
+    std::cout.tie(0);
+    std::ios::sync_with_stdio(0);
+
     int n, m, r;
     std::cin >> n >> m >> r;
     std::list<int> *edges = new std::list<int>[n + 1];
