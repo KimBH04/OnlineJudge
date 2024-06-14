@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #define MOD 1000
 
 int a[5][5], multi_result[5][5], power_result[5][5];
