@@ -48,7 +48,7 @@ int main() {
     scanf("%d%lld", &n, &b);
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            scanf("%d", a[i] + j);;
+            scanf("%d", a[i] + j);
         }
     }
     power(n, b);
