@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t binary_search(int *arr, size_t right, int n) {
-    size_t left = 0;
+int binary_search(int *arr, int right, int n) {
+    int left = 0;
     while (left < right) {
-        size_t mid = (left + right) / 2;
+        int mid = (left + right) / 2;
         if (arr[mid] < n) {
             left = mid + 1;
         }
@@ -21,8 +21,8 @@ size_t binary_search(int *arr, size_t right, int n) {
 int main() {
     int n, q;
     scanf("%d%d", &n, &q);
-    size_t red_count = 0;
-    size_t blue_count = 0;
+    int red_count = 0;
+    int blue_count = 0;
     int *red_indexes = (int*)malloc(sizeof(int) * n);
     int *blue_indexes = (int*)malloc(sizeof(int) * n);
     char *s = (char*)malloc(sizeof(char) * (n + 1));
