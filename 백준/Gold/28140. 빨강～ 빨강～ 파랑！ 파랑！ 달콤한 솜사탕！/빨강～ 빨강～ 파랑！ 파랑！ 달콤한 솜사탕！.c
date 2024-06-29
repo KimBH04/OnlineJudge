@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static inline size_t binary_search(int *arr, size_t right, int n) {
+size_t binary_search(int *arr, size_t right, int n) {
     size_t left = 0;
     while (left < right) {
         size_t mid = (left + right) / 2;
