@@ -8,9 +8,7 @@ int main()
     while (n--)
     {
         scanf("%d", &a);
-        sum += a;
-        sum %= m;
-        cnt += mod_cnt[sum]++;
+        cnt += mod_cnt[sum = (sum + a) % m]++;
     }
     printf("%lld", cnt);
     return 0;
