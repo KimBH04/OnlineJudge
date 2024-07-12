@@ -1,8 +1,8 @@
 #include <iostream>
-#include <vector>
+#include <list>
 
 int max = 0;
-std::vector<std::pair<int, int>> *edges;
+std::list<std::pair<int, int>> *edges;
 
 int search(int n)
 {
@@ -34,7 +34,7 @@ int main()
 {
     int n; std::cin >> n;
 
-    edges = new std::vector<std::pair<int, int>>[n + 1];
+    edges = new std::list<std::pair<int, int>>[n + 1];
     while (--n)
     {
         int parent, child, weight;
