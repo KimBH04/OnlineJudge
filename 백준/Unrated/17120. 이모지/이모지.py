@@ -15,7 +15,7 @@ while 1:
             if is_emoji:
                 stack.clear()
             else:
-                key = ''.join(stack)
+                key = ''.join(stack).lower()
                 if key == 'cat':
                     is_cat = True
                     break
