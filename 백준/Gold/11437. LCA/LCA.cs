@@ -1,4 +1,7 @@
-int n = int.Parse(Console.ReadLine()!) + 1;
+using var sr = new StreamReader(Console.OpenStandardInput());
+using var sw = new StreamWriter(Console.OpenStandardOutput());
+
+int n = int.Parse(sr.ReadLine()!) + 1;
 List<int>[] tree = new List<int>[n];
 for (int i = 0; i < n; i++)
 {
@@ -7,7 +10,7 @@ for (int i = 0; i < n; i++)
 
 for (int i = 2; i < n; i++)
 {
-    string[] inputs = Console.ReadLine()!.Split();
+    string[] inputs = sr.ReadLine()!.Split();
     int a = int.Parse(inputs[0]),
         b = int.Parse(inputs[1]);
     tree[a].Add(b);
@@ -35,10 +38,10 @@ while (queue.Count > 0)
     }
 }
 
-int m = int.Parse(Console.ReadLine()!);
+int m = int.Parse(sr.ReadLine()!);
 while (m-- > 0)
 {
-    string[] inputs = Console.ReadLine()!.Split();
+    string[] inputs = sr.ReadLine()!.Split();
     int a = int.Parse(inputs[0]),
         b = int.Parse(inputs[1]);
 
@@ -57,5 +60,5 @@ while (m-- > 0)
         b = parents[b];
     }
 
-    Console.WriteLine(a);
+    sw.WriteLine(a);
 }
