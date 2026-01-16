@@ -25,14 +25,20 @@ for i in range(n):
 
 while 1:
     stdout.write(f'{r + 1} {c + 1}\n')
-    board[t2i(r, c)] = 9
+    board[t2i(r, c)] = -1
     m = 9
+    nr = -1
+    nc = -1
     for rd, cd in DIR:
         tr = r + rd
         tc = c + cd
-        if 0 <= tr and tr < n and 0 <= tc and tc < n and m > board[t2i(tr, tc)]:
-            m = board[t2i(tr, tc)]
-            r = tr
-            c = tc
+        if 0 <= tr and tr < n and 0 <= tc and tc < n and board[t2i(tr, tc)] != -1:
+            board[t2i(tr, tc)] -= 1
+            if m > board[t2i(tr, tc)]:
+                m = board[t2i(tr, tc)]
+                nr = tr
+                nc = tc
     if m == 9:
         break
+    r = nr
+    c = nc
