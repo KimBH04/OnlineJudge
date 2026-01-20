@@ -23,6 +23,7 @@ for i in range(n):
             if 0 <= i + rd and i + rd < n and 0 <= j + cd and j + cd < n:
                 board[t2i(i, j)] += 1
 
+cnt = 2
 while 1:
     stdout.write(f'{r + 1} {c + 1}\n')
     board[t2i(r, c)] = -1
@@ -34,7 +35,7 @@ while 1:
         tc = c + cd
         if 0 <= tr and tr < n and 0 <= tc and tc < n and board[t2i(tr, tc)] != -1:
             board[t2i(tr, tc)] -= 1
-            if m > board[t2i(tr, tc)]:
+            if m > board[t2i(tr, tc)] and (board[t2i(tr, tc)] or cnt == n * n):
                 m = board[t2i(tr, tc)]
                 nr = tr
                 nc = tc
@@ -42,3 +43,4 @@ while 1:
         break
     r = nr
     c = nc
+    cnt += 1
