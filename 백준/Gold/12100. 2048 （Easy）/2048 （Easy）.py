@@ -1,6 +1,4 @@
 n = int(input())
-m = [[*map(int, input().split())] for _ in range(n)]
-
 def back_tracking(m: list[list[int]], depth: int) -> int:
     if depth == 5:
         re = 0
@@ -35,4 +33,4 @@ def back_tracking(m: list[list[int]], depth: int) -> int:
             re = next_re
     return re
 
-print(back_tracking(m, 0))
+print(back_tracking([[*map(int, input().split())] for _ in range(n)], 0))
