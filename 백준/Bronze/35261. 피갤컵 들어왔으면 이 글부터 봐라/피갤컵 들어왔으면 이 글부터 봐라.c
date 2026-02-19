@@ -3,7 +3,7 @@
 int main()
 {
     int n, min = 5;
-    char s[101], eagle[] = { 'e', 'a', 'g', 'l', 'e' };
+    char s[101], eagle[] = "eagle";
     scanf("%d%s", &n, s);
     for (int i = 0; i + 4 < n; i++)
     {
