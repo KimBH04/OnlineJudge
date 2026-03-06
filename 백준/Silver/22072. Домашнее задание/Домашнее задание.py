@@ -1,22 +1,18 @@
 t = int(input())
 while t > 0:
     t -= 1
-    x = [*reversed(input())]
-    y = [*reversed(input())]
-    xl = len(x)
-    yl = len(y)
-    xy = xl + yl
+    x = [*map(int, input()[::-1])]
+    y = [*map(int, input()[::-1])]
+    l = len(x) + len(y)
 
-    z = [int(c) for c in reversed(input())]
-    zl = len(z)
-    z += [0] * (xy - zl)
-    f = [0] * xy
-    for i in range(xl):
-        for j in range(yl):
-            f[i + j] += int(x[i]) * int(y[j])
+    z = [*map(int, input()[::-1])] + [0] * l
+    f = [0] * l
+    for (i, xc) in enumerate(x):
+        for (j, yc) in enumerate(y):
+            f[i + j] += xc * yc
     
     inf = "Infinity"
-    for i in range(xy):
+    for i in range(l):
         if z[i] != f[i]:
             inf = "Finite"
             break
