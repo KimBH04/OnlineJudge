@@ -6,8 +6,6 @@ namespace Prob
     {
         static void Main(string[] args)
         {
-            int[] ttl = new int[10];
-
             int[] a1 = new int[3];
 
             for (int i = 0; i < 3; i++)
