@@ -9,7 +9,7 @@ namespace Prob5073
         {
             List<string> so = new List<string>();
 
-            for (int i = 0; ;i++)
+            while (true)
             {
                 string[] A = Console.ReadLine().Split();
                 int a = int.Parse(A[0]);
