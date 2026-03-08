@@ -22,9 +22,7 @@ namespace Prob25205
                 word[wordCount] == 'z' ||
                 word[wordCount] == 'x' ||
                 word[wordCount] == 'c' ||
-                word[wordCount] == 'v' ||
-                word[wordCount] == 'R' ||
-                word[wordCount] == 'T')
+                word[wordCount] == 'v')
                 Console.Write(1);
             else
                 Console.Write(0);
