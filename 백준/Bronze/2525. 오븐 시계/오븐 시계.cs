@@ -15,14 +15,14 @@ namespace Prob
             A = Console.ReadLine();
             int rT = int.Parse(A);
 
-            int r = H * 60 + M + rT;
+            M= H * 60 + M + rT;
 
-            if (r > 1439)
+            if (M > 1439)
             {
-                r = r - 1440;
+                M = M - 1440;
             }
 
-            Console.WriteLine("{0} {1}", (r - (r % 60)) / 60, r % 60);
+            Console.WriteLine("{0} {1}", (M - (M % 60)) / 60, M % 60);
         }
     }
 }
