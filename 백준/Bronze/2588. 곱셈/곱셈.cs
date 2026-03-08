@@ -17,7 +17,7 @@ namespace Prob2588
             int y = (Z % 100 - x) / 10;
             int z = (Z - x - y) / 100;
 
-            Console.WriteLine(
+            Console.Write(
                 a * x + "\n" + a * y + "\n" + a * z + "\n" + a * Z);
         }
     }
