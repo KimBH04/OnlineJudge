@@ -30,12 +30,12 @@ namespace Prob2720
             }
 
             for (int i = 0; i < a; i++)
-                Console.WriteLine("{0} {1} {2} {3}", 
-                    d[i][0], 
-                    d[i][1], 
-                    d[i][2], 
-                    d[i][3]);
-            
+            {
+                for (int j = 0; j < 4; j++)
+                    Console.Write(d[i][j] + ' ');
+                
+                Console.WriteLine();
+            }
         }
     }
 }
