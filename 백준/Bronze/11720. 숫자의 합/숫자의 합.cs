@@ -7,10 +7,10 @@ namespace Prob11720
         static void Main(string[] args)
         {
             int sum = 0;
-            Console.ReadLine();
+            int times = int.Parse(Console.ReadLine());
             char[] nums = Console.ReadLine().ToCharArray();
 
-            for (int i = 0; i < nums.Length; i++)
+            for (int i = 0; i < times; i++)
                 sum += (int)Char.GetNumericValue(nums[i]);
 
             Console.WriteLine(sum);
