@@ -20,13 +20,22 @@ namespace Prob2720
                 c[2] = b[i] % 25 % 10 / 5;
                 c[3] = b[i] % 5;
 
-                d[i] = new string[4] { c[0].ToString(), c[1].ToString(), c[2].ToString(), c[3].ToString() };
+                d[i] = new string[4] 
+                { 
+                    c[0].ToString(), 
+                    c[1].ToString(),
+                    c[2].ToString(), 
+                    c[3].ToString() 
+                };
             }
 
             for (int i = 0; i < a; i++)
-            {
-                Console.WriteLine("{0} {1} {2} {3}", d[i][0], d[i][1], d[i][2], d[i][3]);
-            }
+                Console.WriteLine("{0} {1} {2} {3}", 
+                    d[i][0], 
+                    d[i][1], 
+                    d[i][2], 
+                    d[i][3]);
+            
         }
     }
 }
