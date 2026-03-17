@@ -3,7 +3,7 @@
 #define M 1000000007
 typedef unsigned long long int ull;
 
-ull pow_mod(ull n, ull p)
+static inline ull pow_mod(ull n, ull p)
 {
     ull result = 1;
     while (p > 0)
@@ -12,7 +12,6 @@ ull pow_mod(ull n, ull p)
         {
             result *= n;
             result %= M;
-            p--;
         }
         n *= n;
         n %= M;
