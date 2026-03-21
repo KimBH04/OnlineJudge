@@ -1,33 +1,30 @@
-using System;
-using System.Numerics;
-
-namespace _11051
+const int M = 10007;
+var pow = (int n, int p) =>
 {
-    class Program
+    n %= M;
+    int result = 1;
+    while (p > 0)
     {
-        const int r = 10_007;
-        static BigInteger[] m = new BigInteger[1001];
-
-        static void Main(string[] args)
+        if ((p & 1) == 1)
         {
-            m[0] = 1;
-
-            var input = Console.ReadLine().Split();
-            int n = int.Parse(input[0]), k = int.Parse(input[1]);
-
-            for (int i = 1; i <= n; i++)
-                if (m[i] == 0)
-                    m[i] = i * m[i - 1];
-
-            for (int i = 1; i <= k; i++)
-                if (m[i] == 0)
-                    m[i] = i * m[i - 1];
-
-            for (int i = 1; i <= n - k; i++)
-                if (m[i] == 0)
-                    m[i] = i * m[i - 1];
-
-            Console.WriteLine(m[n] / (m[k] * m[n - k]) % r);
+            result *= n;
+            result %= M;
         }
+        n *= n;
+        n %= M;
+        p >>= 1;
     }
+    return result;
+};
+
+var inputs = Console.ReadLine()!.Split();
+int n = int.Parse(inputs[0]), k = int.Parse(inputs[1]);
+
+var f = new int[n + 1];
+f[0] = 1;
+for (int i = 1; i <= n; i++)
+{
+    f[i] = f[i - 1] * i % M;
 }
+
+Console.WriteLine(f[n] * pow(f[k] * f[n - k] % M, M - 2) % M);
