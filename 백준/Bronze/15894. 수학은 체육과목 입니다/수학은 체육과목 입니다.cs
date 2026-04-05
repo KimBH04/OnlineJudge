@@ -1,0 +1,1 @@
+Console.WriteLine(uint.Parse(Console.ReadLine())*4);

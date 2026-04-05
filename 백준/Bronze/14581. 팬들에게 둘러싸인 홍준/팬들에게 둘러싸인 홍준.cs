@@ -1,0 +1,1 @@
+Console.WriteLine($":fan::fan::fan:\n:fan::{Console.ReadLine()}::fan:\n:fan::fan::fan:");

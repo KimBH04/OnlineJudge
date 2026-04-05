@@ -1,0 +1,1 @@
+var n=Array.ConvertAll(Console.ReadLine().Split(),int.Parse);for(int x=-999;x<1000;x++)for(int y=-999;y<1000;y++)if(n[0]*x+n[1]*y==n[2]&&n[3]*x+n[4]*y==n[5])Console.WriteLine(x+" "+y);

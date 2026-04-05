@@ -1,0 +1,1 @@
+Console.Write(Console.ReadLine().ToUpper()=="N"?"Naver D2":"Naver Whale");

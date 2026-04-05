@@ -1,0 +1,1 @@
+var imoge = Console.ReadLine();Console.WriteLine(imoge.Length+imoge.Count(x=>x==':')+imoge.Count(x=>x=='_')*5);
