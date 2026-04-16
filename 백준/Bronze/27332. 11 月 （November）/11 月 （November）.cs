@@ -1,0 +1,1 @@
+if(int.Parse(Console.ReadLine())+int.Parse(Console.ReadLine())*7>30)Console.Write(0);else Console.WriteLine(1);

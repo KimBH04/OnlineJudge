@@ -1,0 +1,1 @@
+print('NO'if'1'==input()and 1&int(input())else'YES')

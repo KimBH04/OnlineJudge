@@ -1,0 +1,1 @@
+Console.WriteLine(Console.ReadLine().Length<Console.ReadLine().Length?"no":"go");

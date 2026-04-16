@@ -1,0 +1,1 @@
+Console.WriteLine(Array.ConvertAll(Console.ReadLine().Split(),int.Parse).Sum());
